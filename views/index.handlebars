@@ -55,7 +55,7 @@
 
                 <form class="adjust" action="todo/update/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="complete" value="false">
-                  <button type="submit">Not Complete</button> {{> tasks/delete-todo}}
+                  <button type="submit">Not Complete</button> {{> tasks/delete-todo2}}
                 </form>
                
                  
@@ -68,20 +68,5 @@
     </section>
 </div><!--end of main container-->
 
-<!--<h4>Add a Task</h4>
-<form class="create-update-form" action="todo/create" method="POST">
-  <div class="form-group">
-    <label for="ca">Task Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="slee">Completed?</label><br>
-    <input type="radio" name="complete" value="1" checked> Complete<br>
-    <input type="radio" name="complete" value="0"> Incomplete
-  </div>
-
-  <button type="submit">Add Task</button>
-</form>-->
 
 

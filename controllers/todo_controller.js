@@ -12,14 +12,14 @@ router.get('/', function (req, res) {
 router.get('/todo', function (req, res) {
 	todo.all(function (data) {
 		var hbsObject = { todo: data };
-		console.log(hbsObject);
+		// console.log(hbsObject);
 		res.render('index', hbsObject);
 	});
 });
 
 router.post('/todo/create', function (req, res) {
-	console.log("name="+req.body.name)
-	console.log("complete="+req.body.complete)
+	// console.log("name="+req.body.name)
+	// console.log("complete="+req.body.complete)
 	todo.create(['name', 'complete'], [req.body.name, req.body.complete], function () {
 		res.redirect('/todo');
 	});
@@ -36,7 +36,8 @@ router.put('/todo/update/:id', function (req, res) {
 });
 
 router.delete('/todo/delete/:id', function (req, res) {
-	var condition = 'id = ' + req.params.id;
+	var condition = 'id = ' + req.body.id;
+	console.log("this is the controller delete function"+condition)
 
 	todo.delete(condition, function () {
 		res.redirect('/todo');
