@@ -17,25 +17,23 @@
         <span class="radio__label">Completed</span>
       </label>
       
-      <!--<input class="f-right" type="submit" value="Add Task" />-->
       <button class="f-right" type="submit2">Add Task</button>
       <br/>
     </form>
 
   </div>
     <section class="grid">
-      <div class="ta-center">
-        <h4>TASKS TO DO</h4>
+      <div>
+        <h4>TO DO</h4>
 
-        <ul>
+        <ul style="list-style-type:none">
           {{#each todo}}
             {{#unless this.complete}}
               <li>
                 {{this.name}}
-
-                <form action="todo/update/{{this.id}}?_method=PUT" method="POST">
+                <form class="adjust" action="todo/update/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="complete" value="true">
-                  <button type="submit">COMPLETED</button>
+                  <button class="f-left" type="submit">DONE</button><br>
                 </form>
                 
               </li>
@@ -44,18 +42,18 @@
         </ul>
       </div>
 
-      <div class ="ta-center">
-        <h4>COMPLETED TASKS</h4>
+      <div>
+        <h4>COMPLETED</h4>
 
-        <ul>
+        <ul style="list-style-type:none">
           {{#each todo}}
             {{#if this.complete}}
               <li>
                 {{this.name}}
 
-                <form action="todo/update/{{this.id}}?_method=PUT" method="POST">
+                <form class="adjust" action="todo/update/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="complete" value="false">
-                  <button type="submit">WAKE UP!</button>
+                  <button type="submit">Redo</button>  <button type="submit">Delete</button>
                 </form>
 
                 
