@@ -1,9 +1,10 @@
-<div class = "wrapper-small">  
-    <h1>This is where the "header" will live</h1>
-
+<div class = "wrapper">  
+  <div class = "topbox">
+    <h2><center>Task Manager: Making your life easier.</center></h2>
+  </div>
     <section class="grid">
       <div>
-        <h2>todo that are not complete!</h2>
+        <h4>TASKS TO DO</h4>
 
         <ul>
           {{#each todo}}
@@ -24,7 +25,7 @@
       </div>
 
       <div>
-        <h2>todo that are complete!</h2>
+        <h4>COMPLETED TASKS</h4>
 
         <ul>
           {{#each todo}}
@@ -46,7 +47,7 @@
     </section>
 </div><!--end of main container-->
 
-<h2>Add a Task</h2>
+<h4>Add a Task</h4>
 <form class="create-update-form" action="todo/create" method="POST">
 
   <div class="form-group">
