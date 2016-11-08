@@ -6,3 +6,11 @@
 
 }
 
+@font-face {
+    font-family: Chunkfive;
+    src: url(/assets/fonts/Chunkfive.otf);
+}
+
+h2 {
+    font-family: Chunkfive;
+}

@@ -1,6 +1,6 @@
 <div class = "wrapper">  
   <div class = "topbox">
-    <h2><center>Task Manager: Making your life easier.</center></h2>
+    <h2><center>when you're good at forgetting</center></h2>
     <form class="create-update-form" action="todo/create" method="POST">
       <label class="textfield">
         <input type="text" id="ca" name="name"/>
@@ -33,8 +33,10 @@
                 {{this.name}}
                 <form class="adjust" action="todo/update/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="complete" value="true">
-                  <button class="f-left" type="submit">DONE</button><br>
+                  <button class="f-left" type="submit">Completed</button><br>
                 </form>
+
+               
                 
               </li>
             {{/unless}}
@@ -53,10 +55,10 @@
 
                 <form class="adjust" action="todo/update/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="complete" value="false">
-                  <button type="submit">Redo</button> 
+                  <button type="submit">Not Complete</button> {{> tasks/delete-todo}}
                 </form>
                
-
+                 
                 
               </li>
             {{/if}}

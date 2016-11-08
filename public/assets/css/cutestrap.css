@@ -353,22 +353,22 @@ Styleguide 2.0
 .btn, [type=button],
 [type=submit],
 button {
-  background-color: #F16B6F;
-  border: none;
+  background-color: transparent;
+  border: 1px solid #F16B6F;
   border-radius: 5rem;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #F16B6F;
   cursor: pointer;
   display: inline-block;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  height: 2.2rem;
+  line-height: .5rem;
   max-width: 100%;
   -webkit-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: .0 2rem;
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
