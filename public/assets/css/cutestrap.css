@@ -55,7 +55,7 @@ p {
   padding-bottom: 2.4rem; }
 
 form {
-  padding: 2.4rem 0; }
+  padding: 8% 15%; }
 
 pre,
 code,
@@ -206,7 +206,9 @@ table {
     padding: 0 .6rem; }
 
 label {
-  color: #7d7d7e; }
+  color: black;
+  /*font-weight: bold; */
+  }
 
 input,
 label,
@@ -262,6 +264,7 @@ button[disabled] {
   cursor: default;
   opacity: .5;
   pointer-events: none; }
+  
 
 .smooth {
   -webkit-font-smoothing: antialiased;
@@ -372,6 +375,41 @@ button {
       -ms-user-select: none;
           user-select: none;
   width: auto; }
+
+/**********************************/  
+[type=submit2]{
+  background-color: #60c5ba;
+  border: none;
+  border-radius: 5rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  max-width: 100%;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  margin: 0 auto;
+  padding: 0 .5rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 12rem; }
+
+  
+  [type=submit2]:hover
+{
+    background-color: #47dece;
+    color: #ffffff; }
+
+/**********************************/
+
+
   .btn:link, [type=button]:link,
   [type=submit]:link,
   button:link, .btn:visited, [type=button]:visited,
@@ -490,8 +528,9 @@ Styleguide 3.0
 
 .radio__label,
 .checkbox__label {
-  color: #7d7d7e;
+  color: white;
   font-size: 1.2rem;
+  letter-spacing: 1px;
   line-height: 1; }
 
 .radio__label:after,
@@ -507,15 +546,16 @@ Styleguide 3.0
 
 .radio input[type=radio]:focus + .radio__label:after,
 .checkbox input[type=checkbox]:focus + .checkbox__label:after {
-  border-color: #E83FB8;
+  border-color: #60c5ba;
   box-shadow: 0 1px 2px 1px #dededf inset; }
 
 .textfield,
 .select {
-  background-color: #ffffff;
+  background-color: transparent;
+  /*opacity: .5;*/
   display: block;
   margin-top: -2px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1rem;
   position: relative; }
 
 .textfield__label,
@@ -536,13 +576,13 @@ Styleguide 3.0
   border: 1px solid #7d7d7e;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 1.8rem .5rem .6rem;
+  padding: .1rem 1rem .1rem;
   position: relative;
   width: 100%; }
 
 .textfield *:focus,
 .select select:focus {
-  border-color: #E83FB8;
+  border-color: #60c5ba;
   box-shadow: 0 1px 2px 0 #dededf inset;
   outline: none; }
 
@@ -564,7 +604,7 @@ Styleguide 3.1
   border-radius: 20px; }
 
 .radio input[type=radio]:checked + .radio__label:before {
-  background-color: #e528b0;
+  background-color: #60c5ba;
   border-radius: 20px;
   content: '';
   height: 10px;
@@ -592,7 +632,7 @@ Styleguide 3.2
   border-radius: 2px; }
 
 .checkbox input[type=checkbox]:checked + .checkbox__label:after {
-  color: #e528b0;
+  color: #F16B6F;
   content: '\2714';
   font-size: 14px;
   line-height: 18px;

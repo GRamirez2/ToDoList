@@ -18,6 +18,8 @@ router.get('/todo', function (req, res) {
 });
 
 router.post('/todo/create', function (req, res) {
+	console.log("name="+req.body.name)
+	console.log("complete="+req.body.complete)
 	todo.create(['name', 'complete'], [req.body.name, req.body.complete], function () {
 		res.redirect('/todo');
 	});
