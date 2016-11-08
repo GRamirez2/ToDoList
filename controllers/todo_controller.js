@@ -36,7 +36,7 @@ router.put('/todo/update/:id', function (req, res) {
 });
 
 router.delete('/todo/delete/:id', function (req, res) {
-	var condition = 'id = ' + req.body.id;
+	var condition = 'id = ' + req.params.id;
 	console.log("this is the controller delete function"+condition)
 
 	todo.delete(condition, function () {
