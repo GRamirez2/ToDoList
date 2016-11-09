@@ -40,6 +40,4 @@ app.use('/', routes);
 
 // listening on port 3000
 var PORT = 3000;
-app.listen(PORT, function(){
-	console.log('express on port ' + PORT);
-});
+app.listen(process.env.PORT || PORT);
